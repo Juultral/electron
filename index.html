@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="p5.js"></script>
+    <script type="text/javascript" src="p5.dom.js"></script>
+    <script type="text/javascript" src="fontawesome-all.js"></script>
+    <script type="text/javascript" src="draw.js"></script>
+    <title>Stain</title>
+  </head>
+  <body >
+    <div class="row menu">
+      <div class="open" title="Open">
+        <i class="far fa-file fa-2x" title="Open"></i><input id="poza" type="file" onchange="upload(this)"/>
+      </div>
+      <div title="Brush"><i class="fas fa-paint-brush fa-2x" onclick="brush()" id="br_act"></i>
+        <div id="par" class="brush" style="display: none;">
+          <input type="range" id="m" onchange="grosime()" value="5" class="brush_param">
+          <input type="color" onchange="culoare()" id="cl" style="width: 40px" />
+        </div>
+      </div>
+      <div title="Brightness"><i class="fas fa-sun fa-2x" onclick="lumina()"></i>
+        <div id="lum" class="brush" style="display: none;">
+          <input type="range" id="b" onchange="luminozitate()" value="5" class="brush_param">
+        </div>
+      </div>
+      <div title="Rotate"><i class="fas fa-redo-alt fa-2x" onclick="Rotate()"></i></div>
+      <div title="Crop"><i class="fas fa-crop fa-2x" onclick="inactiv()"> </i></div>
+      <div title="Clear"><i class="fas fa-eraser fa-2x" onclick="Clear()"></i></div>
+      <div title="Close"><i class="fas fa-times fa-2x" onclick="Close()"></i></div>
+      <div title="Save"><i class="fas fa-save fa-2x" onclick="Save()"></i></div>
+    </div>
+     <div class="canvas">
+       <div id="cnv">
+       </div>
+     </div>
+  </body>
+</html>

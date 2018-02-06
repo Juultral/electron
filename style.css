@@ -1,0 +1,38 @@
+body {
+	background-color: #272822 !important;
+}
+.menu{
+	margin: 10px 0px 0px 0px;
+	padding: 10px;
+	background-color: #ff3300;
+	display: flex;
+	justify-content: space-around;
+}
+.canvas{
+	margin: 2%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.open{
+	position: relative;
+}
+.open input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+  	left: 0;
+  	height: 100%;
+  	width: 100%;
+}
+.brush{
+	color: white;
+	float: right;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.brush_param{
+	margin: 2px;
+	width: 100px;
+}
